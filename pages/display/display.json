@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "preface": "/components/preface/preface",
+    "collection": "/components/collection/collection",
+    "dynasty": "/components/dynasty/dynasty"
+    
+  },
+  "pageOrientation": "landscape",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#76241E",
+  "navigationBarTitleText": "虚拟展",
+  "navigationBarTextStyle": "white"
+}

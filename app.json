@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addReserve/addReserve",
+    "pages/collect/collect",
+    "pages/display/display",
+    "pages/exhibit/exhibit",
+    "pages/exhibition/exhibition",
+    "pages/exhibitentity/exhibitentity",
+    "pages/login/login",
+    "pages/notice/notice",
+    "pages/noticeList/noticeList",
+    "pages/reserve/reserve",
+    "pages/reserveList/reserveList",
+    "pages/success/success",
+    "pages/virtualShow/virtualShow",
+    "pages/topicShow/topicShow",
+    "pages/reserveDetail/reserveDetail",
+    "pages/userInfo/userInfo",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "秀山博物馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#4B4B4B",
+    "selectedColor": "#6CA8FE",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/index.png",
+        "selectedIconPath": "/assets/indexs.png"
+      },
+      {
+        "pagePath": "pages/exhibition/exhibition",
+        "text": "展览",
+        "iconPath": "/assets/exhibition.png",
+        "selectedIconPath": "/assets/exhibitions.png"
+      },
+      {
+        "pagePath": "pages/reserve/reserve",
+        "text": "预约",
+        "iconPath": "/assets/interaction.png",
+        "selectedIconPath": "/assets/interactions.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/assets/user.png",
+        "selectedIconPath": "/assets/users.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

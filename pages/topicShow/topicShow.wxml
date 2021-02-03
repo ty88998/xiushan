@@ -1,0 +1,31 @@
+<view class="topic-head">
+    <!-- <swiper class="topic-swiper" interval="2000" duration="1000" previous-margin="86rpx" next-margin="382rpx" circular bindchange="swiperChange">
+        <block wx:if="{{indexInfo.display==2}}">
+            <block wx:for="{{collectionList}}" wx:key="index">
+                <swiper-item class="topic-swiper-item">
+                    <view style="{{(currentItem+2)%5==index?'justify-content: flex-start':''}}" class="swiper-item-box {{currentItem==index?'active':''}}">
+                        <image data-recno="{{item.recNo}}" data-index="{{index}}" mode="scaleToFill" bind:tap="goToVirtual" src="{{item.thumbnail}}" />
+                    </view>
+                </swiper-item>
+            </block>
+        </block>
+        <block wx:else>
+            <block wx:for="{{scenes}}" wx:key="index">
+                <swiper-item class="topic-swiper-item">
+                    <view style="{{(currentItem+2)%5==index?'justify-content: flex-start':''}}" class="swiper-item-box {{currentItem==index?'active':''}}">
+                        <image data-recno="{{item.recNo}}" data-index="{{index}}" mode="scaleToFill" bind:tap="goToVirtual" src="{{item.imgURL}}" />
+                    </view>
+                </swiper-item>
+            </block>
+        </block>
+    </swiper> -->
+    <!-- <image class="topic-head-bg" src="../../assets/show/gray-wall.jpg" mode="scaleToFill"></image> -->
+</view>
+<view class="topic-content">
+    <!-- <view class="content-title">{{contentTitle}}</view>
+    <view class="content-time">{{contentTime}}</view>
+    <view class="content-body">{{contentBody}}</view> -->
+    <rich-text wx:if="{{indexInfo.display==2}}" nodes="{{newRich}}" space="nbsp">
+        
+    </rich-text>
+</view>

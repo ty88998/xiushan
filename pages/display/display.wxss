@@ -1,0 +1,107 @@
+/* page/display/display.wxss */
+
+swiper {
+    width: 100vmax;
+    height: 100vmin;
+}
+
+.module-scroll-view {
+    white-space: nowrap;
+    /* height: 320rpx; */
+    width: 100%;
+}
+
+.view-item {
+    display: inline-block;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* ------------- 首页 ------------- */
+.container {
+    background: linear-gradient(to right, #080808, #76241e 45%);
+}
+
+.midBackup {
+    width: 100%;
+    height: 70vmin;
+    background-size: 100% 120%;
+    background-position: 50%;
+}
+
+.itemName1 {
+    color: #fff;
+    margin: 5vmin 0 3vmin 0;
+    letter-spacing: 2vmin;
+    font-size: 12vmin;
+    font-family: 'yuweiJ' !important;
+}
+
+.itemName2 {
+    color: #fff;
+    margin: 4vmin 0;
+    font-size: 5vmin;
+    /* font-family: 'yuweij2' !important; */
+}
+
+.header,
+.footer {
+    height: 15vmin;
+    background-color: #76241e;
+    background: linear-gradient(to right, #080808, #76241e 45%);
+}
+
+
+/* 布局 */
+.flex_center_space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shade-view {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    background: #bb5959;
+}
+
+.finger {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    animation: fingermove 4s linear 1.5s 3 forwards;
+}
+
+.sliding {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+@keyframes fingermove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300rpx);
+    }
+}
+
+/* ------------- 首页 ------------- */

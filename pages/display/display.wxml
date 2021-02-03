@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="">
+	<block wx:if="{{indexInfo.display==0}}">
+		<collection collection="{{scenes}}" display="{{indexInfo.display}}" bindparentrun="parentrun"></collection>
+	</block>
+	<block wx:else>
+		<swiper bindchange="swiperChange">
+			<swiper-item>
+				<view wx:if="{{indexInfo.display>0&&isShade}}">
+				<view class="shade-view" bindtouchstart="shade">
+					<image class="sliding" src="../../assets/sliding.png" mode="widthFix"></image>
+					<image class="finger" src="../../assets/finger.png"></image>
+				</view>
+				</view>
+				<view class="header"></view>
+				<view class="midBackup flex_center_space" style="background-image: url(https://cqzrkj.oss-cn-beijing.aliyuncs.com/IMG/backMid.png);">
+				<view class="flex_center">
+					<text class="itemName1">{{indexInfo.region}}</text>
+					<text class="itemName1">{{indexInfo.name}}</text>
+				</view>
+				</view>
+				<view class="footer"></view>
+			</swiper-item>
+			<swiper-item>
+				<preface style="width:100%" projectno="{{indexInfo.recNo}}" prefacetext="{{indexInfo.preface}}" bindparentrun="parentrun"></preface>
+			</swiper-item>
+			<block wx:if="{{indexInfo.display=='1'}}" wx:for="{{scenes}}" wx:key="recNo" wx:for-item="collection">
+				<swiper-item>
+					<collection collection="{{collection}}" display="{{indexInfo.display}}" bindparentrun="parentrun"></collection>
+				</swiper-item>
+			</block>
+			<block wx:if="{{indexInfo.display=='2'}}" wx:for="{{scenes}}" wx:key="recNo">
+				<swiper-item>
+					<dynasty scene="{{item}}" bindparentrun="parentrun"></dynasty>
+				</swiper-item>
+				<block wx:for="{{item.collections}}" wx:key="recNo" wx:for-item="collection">
+					<swiper-item>
+						<collection collection="{{collection}}" display="{{indexInfo.display}}" bindparentrun="parentrun"></collection>
+					</swiper-item>
+				</block>
+			</block>
+		</swiper>
+	</block>
+</view>

@@ -1,0 +1,18 @@
+<view class="virtual-show">
+    <image bind:tap="preImg" class="virtual-show-img" src="{{scenes.imgURL}}" mode="center" />
+</view>
+<view class="options-show">
+    <view  bind:tap="payMp3" class="option-btn">
+        <image src="../../assets/show/voice.png" alt="" />
+        <view class="option-font">语音播报</view>
+    </view>
+    <view class="option-line" />
+    <view bind:tap="goTo3D" class="option-btn">
+        <image src="../../assets/show/emulate3D.png" alt="" />
+        <view class="option-font">3D展示</view>
+    </view>
+</view>
+<view class="show-content">
+    <view class="show-title">{{scenes.name}}</view>
+    <view class="show-body">{{scenes.synopsis}}</view>
+</view>

@@ -1,0 +1,23 @@
+<view wx:if="{{status == 1}}" class="clearBtn">
+  <button bind:tap="clearHistory">清空历史</button>
+</view>
+<view wx:if="{{showData.length}}" class="collections">
+  <block wx:if="{{column==2}}">
+    <x-flow-slot flowData="{{showData}}" imageField="thumbnail"  generic:selectable="x-flow-card" />
+  </block>
+  <block wx:else>
+    <x-flow-slot flowData="{{showData}}" generic:selectable="x-pic-box" imageField="dataImg" />
+  </block>
+</view>
+<!-- 收藏或历史页面 pages/collect/collect.wxml
+<view class="collections">x
+<block wx:if="{{status==0}}">
+  <fullpull showdata="{{showData}}"></fullpull>
+</block>
+<block wx:else>
+  <view class="clearBtn">
+    <button bind:tap="clearHistory">清空历史</button>
+  </view> 
+  <picbox pics="{{showData}}" addr="c"></picbox>
+</block>
+</view> -->
