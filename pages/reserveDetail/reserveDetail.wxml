@@ -29,7 +29,7 @@
     <view>{{userInfo.address}}</view>
   </view>
   <view class="ctrl-btn">
-    <view bind:tap="goToRewrite">修改</view>
-    <view bind:tap="goToDelete">取消</view>
+    <!-- <view bind:tap="goToRewrite">修改</view>
+    <view bind:tap="goToDelete">取消</view> -->
   </view>
 </view>

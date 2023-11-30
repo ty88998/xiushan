@@ -1,3 +1,4 @@
+import { getItem } from "./store"
 /**
  * 对象格式为路径
  * @param {*} nextInfo 
@@ -19,8 +20,9 @@ export function urlParse(nextInfo = {}) {
 export function loginIntercept(nextInfo) {
     wx.getSetting({
         success(res) {
-            if (!res.authSetting['scope.userInfo']) {
-                if (nextInfo) {
+            // if (!res.authSetting['scope.userInfo']) {
+            if (!wx.getStorageSync('userInfo')) {
+                if (nextInfo) {wx.getStorageSync('userInfo')
                     wx.navigateTo({ url: '/pages/login/login?nextInfo=' + JSON.stringify(nextInfo) })
                 } else {
                     wx.navigateTo({ url: '/pages/login/login' })

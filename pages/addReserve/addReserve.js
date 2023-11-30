@@ -1,6 +1,13 @@
 import { getSysInfoCfg, addSgReserveInfo, getReserveInfo } from '../../api/reserveInfo'
 
-const selectOption = [{ type: "二代身份证", value: "1" }, { type: "港澳居民来往内地通行证", value: "2" }, { type: "台胞证", value: "3" }, { type: "护照", value: "4" }, { type: "军官证", value: "5" }]
+const selectOption = [
+  { type: "二代身份证", value: "1" },
+  { type: "港澳居民来往内地通行证", value: "2" },
+  { type: "台胞证", value: "3" },
+  { type: "护照", value: "4" },
+  { type: "军官证", value: "5" },
+  { type: "外国人永久居留身份证", value: "6" }
+]
 const selectTimes = [{ name: "上午", value: 0, checked: false }, { name: "下午", value: 1, checked: false }]
 const appInst = getApp()
 
@@ -326,6 +333,24 @@ Page({
         }
       }
       if (!pass) {
+        wx.showToast({
+          title: "证件信息错误！",
+          image: '../../assets/cuowu.png',
+          duration: 1000,
+        })
+        code = ''
+      }
+    } else if (this.data.cardType === "外国人永久居留身份证") {
+      if (code.length > 18 || /^ [\s]*$/.test(code)) { // 判断全部为空格
+        wx.showToast({
+          title: "证件信息错误！",
+          image: '../../assets/cuowu.png',
+          duration: 1000,
+        })
+        code = ''
+      }
+    } else{
+      if (code.length > 15 || /^ [\s]*$/.test(code)) { // 判断全部为空格
         wx.showToast({
           title: "证件信息错误！",
           image: '../../assets/cuowu.png',
